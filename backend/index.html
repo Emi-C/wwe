@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BACK</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="formin">
+    <label id="ltit">Titolo</label><br>
+    <input type="text" id="tit">
+    <br>
+    <label id="ltxt">Testo</label><br>
+    <textarea id="txt"></textarea>
+    <br>
+    <label id="limg">Immagine</label><br>
+    <!--<input type="file" id="img">-->
+    <div class="btn-container">
+        <!--the three icons: default, ok file (img), error file (not an img)-->
+        <h1 class="h1img imgupload"><i class="fa fa-file-image-o"></i></h1>
+        <h1 class="h1img imguploadok"><i class="fa fa-check"></i></h1>
+        <h1 class="h1img imguploadstop"><i class="fa fa-times"></i></h1>
+        <!--this field changes dinamically displaying the filename we are trying to upload-->
+        <p id="namefile">&nbsp;</p>
+        <!--our custom btn which which stays under the actual one-->
+        <a type="button" id="btnup">Sfoglia immagine...</a>
+        <!--this is the actual file input, is set with opacity=0 beacause we wanna see our custom one-->
+        <input type="file" value="" name="img" id="img">
+        <input type="hidden" value=1 id="imgflag">
+    </div>
+    <br>
+    <label id="lcat">Categoria</label><br>
+    <select id="cat">
+        <option value="">-</option>
+        <option value="1">Exhibit design</option>
+        <option value="2">Stage design</option>
+        <option value="3">Special Events</option>
+        <option value="4">Technology and Interactions</option>
+    </select>
+    <br>
+    <!--<label id="lanno">Anno</label><br>
+    <select id="anno">
+        <option value="2016">2016</option>
+        <option value="2015">2015</option>
+        <option value="2014">2014</option>
+        <option value="2013">2013</option>
+        <option value="2012">2012</option>
+    </select>
+    <br>-->
+    <a id="sbm">inserisci</a>
+</div>
+
+<div id="results">
+
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script src="ckeditor/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('txt');
+</script>
+
+<script src="main.js"></script>
+
+</body>
+</html>
