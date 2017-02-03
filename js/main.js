@@ -87,7 +87,7 @@ $(".tgserv").click(function(){
 	if ($("#"+id).hasClass("collapsed")){
 		$("#"+id).css("max-height","10000px");//workaround
 	}else{
-		$("#"+id).css("max-height","5px");
+		$("#"+id).css("max-height","25px");
 	}
 	$("#"+id).toggleClass("collapsed");
 });
