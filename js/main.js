@@ -18,9 +18,9 @@ $(document).ready(function(){
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         if (scroll > 0) {
-            $('.menu').css('background', 'rgba(158,148,144,.75)');
+            $('.menu').css('background', 'rgba(158,148,144,.85)');
         } else {
-            $('.menu').css('background', 'rgba(158,148,144,.1)');
+            $('.menu').css('background', 'rgba(158,148,144,.2)');
         }
     });
 });

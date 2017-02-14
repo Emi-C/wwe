@@ -150,7 +150,7 @@ h3.titsec{
     top: 0;
     width: 100%;
     z-index: 99;
-    background: rgba(158,148,144,.1);
+    background: rgba(158,148,144,.2);
     transition: all .3s;
     text-align:center;
 }
@@ -247,7 +247,7 @@ padding-top:10px;
 /*LANDING*/
 #landing{
     min-height:90vh;
-    background: url("../img/b1.jpg") no-repeat center center;
+    background: url("../img/landingbg.jpg") no-repeat center center;
 		background-color:grey;
     background-size: cover;
 }
