@@ -157,6 +157,7 @@ h3.titsec{
 @media screen and (max-width: 1199px){
 	.menu{
 		display:none;
+		height:0px;
 	}
 }
 /*.menu ul{
