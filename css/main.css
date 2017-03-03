@@ -540,6 +540,9 @@ footer{
 	*/
 	background: #3c3c3c;
 }
+.altfoto{
+	cursor:pointer;
+}
 @media screen and (min-width: 768px){
     .modal-dialog {
         max-width:1200px;

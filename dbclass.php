@@ -1,12 +1,16 @@
 <?php
-$servername = "localhost";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+/*$servername = "localhost";
 $username = "root";
 $password = "";
-$database = "wwe";
-/*$servername = "localhost";
-$username = "wwe";
-$password = "JSUdgtzve653Iw9";
-$database = "wwe_db";*/
+$database = "wwe";*/
+$servername = "localhost";
+$username = "yh22kfvy";
+$password = "2-?w3e{d87k$";
+$database = "yh22kfvy_ec";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);

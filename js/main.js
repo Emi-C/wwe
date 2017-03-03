@@ -72,6 +72,13 @@ $(window).scroll(function() {
 });
 
 
+//sales scroll
+$(".gotocontact").click(function(){
+	$('html,body').animate({
+        scrollTop: $("#contacts").offset().top
+    }, 700);
+});
+
 
 //altezza div servizi
 $(document).ready(function(){
@@ -103,9 +110,7 @@ $(document).ready(function(){
 
 	.done(function(data) {
 		$.each(data, function(i, e) {
-			//var $item=$('<div class="col-md-3 col-sm-6 '+e.anno+'"><div class="picevent" style="background:url(\''+e.img+'\') no-repeat center center;background-size:cover;"><a id="foto'+e.id+'" class="picover center" data-toggle="modal" data-target="#modServ"><p>'+e.tit+'</p></a></div></div>');
 			var $item=$('<div class="col-md-3 col-sm-6"><div class="picevent" style="background:url(\''+e.img+'\') no-repeat center center;background-size:cover;"><a id="foto'+e.id+'" class="picover center" data-toggle="modal" data-target="#modServ"><p>'+e.tit+'</p></a></div></div>');
-			//$('#serv'+e.cat+' .griglia').isotope().append( $item ).isotope( 'appended', $item );
 			$('#serv'+e.cat+' .griglia').append( $item );
 		});
 	})
@@ -113,14 +118,6 @@ $(document).ready(function(){
 	.fail(function() {
 		alert('ko');
 	});
-});
-
-
-//sales scroll
-$(".gotocontact").click(function(){
-	$('html,body').animate({
-        scrollTop: $("#contacts").offset().top
-    }, 700);
 });
 
 
@@ -135,18 +132,27 @@ $(".griglia").on('click','.picover',function() {
 	})
 
 		.done(function(data) {
-			$.each(data, function(i, e) {
+      $.each(data, function(i, e) {
 				$('.modal-title').html(e.tit);
-				//$('.modal-subtitle').html(e.anno+' - '+$('.ser'+e.cat).html());
-				$('.modal-subtitle').html($('.ser'+e.cat).html());
-				$('#modfoto').html('<img class="img-responsive" src="'+e.img+'">');
+				$('#fotomodal').attr('src',e.img);
+				$('#fotoalt1').html(e.img1);
+				$('#fotoalt2').html(e.img2);
+				$('#fotoalt3').html(e.img3);
 				$('#modtxt').html(e.txt);
-			});
+		  });
 		})
 
 		.fail(function() {
 			alert('ko');
 		});
+});
+
+
+//altimg modal
+$(".modal").on("click",".altfoto",function(){
+	var appo=$("#fotomodal").attr("src");
+	$("#fotomodal").attr("src",$(this).attr("src"));
+	$(this).attr("src",appo);
 });
 
 //isotope

@@ -2,6 +2,23 @@
 include('../dbclass.php');
 $id=$_POST['id'];
 
+$q="select * from wwe_foto where id=".$id;
+$res=mysqli_query($conn, $q);
+$num_rows = mysqli_num_rows($res);
+
+while ($row = mysqli_fetch_assoc($res)) {
+	$pos=$row["pos"];
+}
+
+
+$qu="update wwe_foto set pos=pos-1 where pos>".$pos;
+
+if (!mysqli_query($conn, $qu)){
+	http_response_code(500);
+	echo $qu."<br>";
+	echo("Error shift: " . mysqli_error($conn));
+}
+
 
 $q="delete from wwe_foto where id=".$id;
 if (!mysqli_query($conn, $q)) {
