@@ -126,10 +126,10 @@ hr.tall{
     color:#F38B00;
 }
 .bg-orange{
-    background:#ED9803;
+    background-color:#E48409;
 }
 .bg-grey{
-    background:#9E9490;
+    background-color:#8A8370;
 }
 .white,.white:hover,.white:focus{
     color:#fdfdfd;
@@ -150,7 +150,7 @@ h3.titsec{
     top: 0;
     width: 100%;
     z-index: 99;
-    background: rgba(158,148,144,.2);
+    background: rgba(228,132,9,.35);
     transition: all .3s;
     text-align:center;
 }
@@ -247,7 +247,7 @@ padding-top:10px;
 
 /*LANDING*/
 #landing{
-    min-height:90vh;
+    min-height:60vh;
     background: url("../img/landingbg.jpg") no-repeat center center;
 		background-color:grey;
     background-size: cover;
@@ -256,7 +256,7 @@ padding-top:10px;
 
 /*manifesto*/
 #manifesto{
-    min-height:60vh;
+    min-height:50vh;
     background: url("../img/b2.jpg") no-repeat center center;
 		background-color:gold;
     background-size: cover;
@@ -265,7 +265,7 @@ padding-top:10px;
 
 /*features*/
 #features{
-    min-height:60vh;
+    min-height:50vh;
     background: url("../img/b3.png") no-repeat center top;
 		background-color:orange;
     background-size: cover;
@@ -274,7 +274,7 @@ padding-top:10px;
 
 /*features2*/
 #mission{
-    min-height:60vh;
+    min-height:50vh;
     background: url("../img/b4.jpg") no-repeat center top;
 		background-color:brown;
     background-size: cover;
@@ -283,7 +283,7 @@ padding-top:10px;
 
 /*portfolio*/
 #portfolio{
-    min-height:60vh;
+    min-height:50vh;
 }
 /*portfolio*/
 
@@ -292,19 +292,19 @@ padding-top:10px;
     min-height:50vh;
 }
 #servizio1{
-	background: url("../img/b6.png") no-repeat center top;
+	background: url("../img/exh.png") no-repeat center top;
 	background-size: cover;
 }
 #servizio2{
-	background: url("../img/b7.png") no-repeat center top;
+	background: url("../img/stage.png") no-repeat center top;
 	background-size: cover;
 }
 #servizio3{
-	background: url("../img/b8.png") no-repeat center top;
+	background: url("../img/spec.png") no-repeat center top;
 	background-size: cover;
 }
 #servizio4{
-	background: url("../img/b9.jpg") no-repeat center top;
+	background: url("../img/tech.png") no-repeat center top;
 	background-size: cover;
 }
 /*servizi*/
@@ -312,17 +312,19 @@ padding-top:10px;
 /*facilities*/
 .facilities{
 	min-height:50vh;
-
 }
 #facilities{
-	background: url("../img/b10.png") no-repeat center top;
+	background: url("../img/faci.png") no-repeat center top;
 	background-size: cover;
+}
+#mappe{
+	background:#ABA48F;
 }
 /*facilities*/
 
 /*news*/
 #news{
-	min-height:60vh;
+	min-height:50vh;
 }
 /*news*/
 
@@ -331,7 +333,7 @@ padding-top:10px;
 .service{
 	overflow:hidden;
 	transition: all .7s;
-	max-height:25px;
+	max-height:0px;
 }
 .tgserv,.tgserv:hover,.tgserv:focus{
     color:#fafafa;
@@ -411,7 +413,7 @@ padding-top:10px;
     color:#3c3c3c;
 		text-decoration: none;
 }
-.gotocontact:after{
+/*.gotocontact:after{
 	content: '';
   position: absolute;
   left: 45%;
@@ -421,8 +423,15 @@ padding-top:10px;
   border-bottom: 5px solid #3c3c3c;
   border-right: 5px solid #3c3c3c;
 	transform: rotate(45deg);
-}
+}*/
 /*sales*/
+
+/*news*/
+#news{
+background: url("../img/news.png") no-repeat center top;
+background-size: cover;
+}
+/*news*/
 
 /*CONTACT*/
 input{
@@ -493,6 +502,7 @@ footer{
 	display:inline-block;
 	width:50px;
 	margin-right:10px;
+	float: right;
 }
 /*FOOTER*/
 

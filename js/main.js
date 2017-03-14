@@ -18,9 +18,9 @@ $(document).ready(function(){
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         if (scroll > 0) {
-            $('.menu').css('background', 'rgba(158,148,144,.85)');
+            $('.menu').css('background', 'rgba(228,132,9,.85)');
         } else {
-            $('.menu').css('background', 'rgba(158,148,144,.2)');
+            $('.menu').css('background', 'rgba(228,132,9,.35)');
         }
     });
 });
@@ -94,7 +94,7 @@ $(".tgserv").click(function(){
 	if ($("#"+id).hasClass("collapsed")){
 		$("#"+id).css("max-height","10000px");//workaround
 	}else{
-		$("#"+id).css("max-height","25px");
+		$("#"+id).css("max-height","0px");
 	}
 	$("#"+id).toggleClass("collapsed");
 });
