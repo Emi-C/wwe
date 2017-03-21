@@ -91,6 +91,9 @@ hr.tall{
 .nopadding{
     padding:0!important;
 }
+.nomargin{
+    margin:0!important;
+}
 .errore{
     font-weight:bold;
     color:red;
@@ -143,6 +146,9 @@ h2.titsec{
 }
 h3.titsec{
 	font-size:2.5rem;
+}
+h4.titsec{
+	font-size:2rem;
 }
 
 @media (min-width: 1200px){
@@ -502,10 +508,14 @@ footer{
 	background:#F38B00;
 	padding:50px 0;
 }
-@media screen and (min-width:992px) {
-	/*.social{
-		text-align:right;
-	}*/
+.social{
+	font-weight:bold;
+	font-size:.8rem;
+}
+@media screen and (max-width:991px) {
+	.social{
+		font-size:1rem;
+	}
 }
 .social img{
 	display:inline-block;
@@ -583,7 +593,10 @@ footer{
     text-align:center;
 }
 .modal-title{
-    font-size:3rem;
+    font-size:2.2rem;
+}
+#fotomodal{
+	margin-bottom:20px;
 }
 #modtxt{
     color:#fafafa;
