@@ -164,97 +164,35 @@ h4.titsec{
     top: 0;
     width: 100%;
     z-index: 99;
-    background: rgba(228,132,9,.35);
+    background: rgba(228,132,9,.75);
     transition: all .3s;
-    text-align:center;
 }
-@media screen and (max-width: 1199px){
+/*@media screen and (max-width: 1199px){
 	.menu{
 		display:none;
 		height:0px;
 	}
-}
-/*.menu ul{
-    padding:0;
-    list-style-type: none;
-    display: inline-block;
-    margin:0;
-}
-.menu ul li{
-    display:inline-block;
-    font-size:.85rem;
-}
-.menu ul li a{
-    display:block;
-    padding:20px 20px;
-    color: #fdfdfd;
-    text-transform: uppercase;
-	border-bottom:3px solid transparent;
-	transition: all.3s;
-}
-.menu ul li a:hover,.menu ul li a.active{
-    text-decoration:none;
-}
-.menu ul li a:focus{
-    outline: 0!important;
-	text-decoration:none;
-}
-.menu ul li a.active{
-	border-color:#fafafa;
-	transform:scale(1.1,1.1);
 }*/
-
-.menu ul{
-    display: inline-block;
-    margin:0;
-		text-align:left;
-		padding-right:0px;
+.menu a{
+	font-size:.85rem;
+	text-transform: capitalize;
+	color:#fdfdfd;
+	display:inline-block;
+	padding:5px;
+	transition: all .3s;
 }
-.menu>ul{
-	padding:0;
-	list-style-type: none;
+.menu a:hover,.menu a:focus{
+	color: #fdfdfd;
+	text-decoration: none;
 }
-
-.menu ul li{
-    font-size:.7rem;
-}
-.menu>ul>li{
-    display:inline-block;
-		vertical-align:top;
+.menu a.active{
+	transform: scale(1.1);
+	border-bottom:1px solid #fdfdfd;
 }
 
-.menu ul li a{
-    display:block;
-		font-weight:bold;
-    padding:5px 20px;
-    color: #fdfdfd;
-    text-transform: uppercase;
-	border-bottom:3px solid transparent;
-	transition: all.3s;
-}
-.menu>ul>li>a{
-padding-top:10px;
-}
-
-.menu ul li a:hover,.menu ul li a.active{
-    text-decoration:none;
-}
-.menu ul li a:focus{
-    outline: 0!important;
-	text-decoration:none;
-}
-.menu>ul>li>a.active,
-.menu>ul>li>ul>li>a.active{
-	/*border-color:#fafafa;*/
-	text-decoration:underline;
-	transform:scale(1.1,1.1);
-}
 @media screen and (max-width:767px) {
-	.menu ul li{
+	.menu a{
 		font-size:.6rem;
-	}
-	.menu ul li a{
-		padding:20px 10px;
 	}
 }
 /*MENU*/

@@ -18,9 +18,9 @@ $(document).ready(function(){
     $(window).scroll(function () {
         var scroll = $(window).scrollTop();
         if (scroll > 0) {
-            $('.menu').css('background', 'rgba(228,132,9,.85)');
+            $('.menu').css('background', 'rgba(228,132,9,1)');
         } else {
-            $('.menu').css('background', 'rgba(228,132,9,.35)');
+            $('.menu').css('background', 'rgba(228,132,9,.75)');
         }
     });
 });
@@ -43,16 +43,19 @@ $('#conthelper').click(function(){
 
 //SCROLLSPY
 $(window).scroll(function() {
+	//$('#landing').css("padding-top",mh+"px");
+
+	$(".menu a").removeClass("active");
 	//get the divs offsets
 	var divs=[];
-	$( ".menu a:not('#conthelper')" ).each(function(i) { //eccezione per helper contatti...
+	$( ".menu a" ).each(function(i) {
 		var appo=$(this).attr("target");
 		divs[i]=$("#"+appo).offset().top;
 	});
 
 	//gets actual scroll and adds vh/2
 	var pos=($(window).scrollTop())-toppad();
-	var off=($(window).height())/4;
+	var off=($(window).height())/7;
 
 	//if scroll is < vh/2 then we remove active class
 	if (pos<off){$( ".menu a" ).removeClass("active"); return;}
@@ -62,21 +65,11 @@ $(window).scroll(function() {
 	//gets the first div on actual scroll > div and sets its menu voice as active
 	var index=0;
 	for (index = 0; index < divs.length; index++) {
-		if (pos>divs[index]){
-			$(".menu a").removeClass("active");
-		}else{
+		if (pos<divs[index]){
 			break;
 		}
 	}
-	$( ".menu a:not('#conthelper'):eq("+index+")" ).addClass("active");
-});
-
-
-//sales scroll
-$(".gotocontact").click(function(){
-	$('html,body').animate({
-        scrollTop: $("#contacts").offset().top
-    }, 700);
+  $(".menu a[target]:eq("+index+")").addClass("active");
 });
 
 
