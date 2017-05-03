@@ -25,23 +25,45 @@ $(document).ready(function(){
     });
 });
 
+//menumob toggle
+$('#tgmobmenu').click(function(){
+	$("#mobmenu").css("height", "100vh");
+	$("body").css("overflow", "hidden");
+});
 
-//menu
-$(".menu a:not('#conthelper')").click(function(){
+$('#xmobmenu').click(function(){
+	$("#mobmenu").css("height", "0vh");
+	$("body").css("overflow", "auto");
+});
+
+//menu click
+//$(".menu a:not('#conthelper')").click(function(){
+$(".menu a").click(function(){
 	var target=$(this).attr('target');
 
 	$('html,body').animate({
         scrollTop: $("#"+target).offset().top-toppad()
     }, 700);
 });
-
 //helper per contatti
-$('#conthelper').click(function(){
+/*$('#conthelper').click(function(){
   $('#conthelptrg').click();
+});
+*/
+
+
+//menumob click
+$(".menumoblink a").click(function(){
+	var target=$(this).attr('target');
+  $('#xmobmenu').click();
+	setTimeout(function(){$('html,body').animate({
+        scrollTop: $("#"+target).offset().top-toppad()
+    }, 700)},700);
 });
 
 
-//SCROLLSPY
+
+//SCROLLSPY menu
 $(window).scroll(function() {
 	//$('#landing').css("padding-top",mh+"px");
 
@@ -70,6 +92,37 @@ $(window).scroll(function() {
 		}
 	}
   $(".menu a[target]:eq("+index+")").addClass("active");
+});
+
+//SCROLLSPY menu MOBILE!
+$(window).scroll(function() {
+	//$('#landing').css("padding-top",mh+"px");
+
+	$(".menumoblink a").removeClass("active");
+	//get the divs offsets
+	var divs=[];
+	$( ".menumoblink a" ).each(function(i) {
+		var appo=$(this).attr("target");
+		divs[i]=$("#"+appo).offset().top;
+	});
+
+	//gets actual scroll and adds vh/2
+	var pos=($(window).scrollTop())-toppad();
+	var off=($(window).height())/7;
+
+	//if scroll is < vh/2 then we remove active class
+	if (pos<off){$( ".menumoblink a" ).removeClass("active"); return;}
+
+	pos=pos+off;
+
+	//gets the first div on actual scroll > div and sets its menu voice as active
+	var index=0;
+	for (index = 0; index < divs.length; index++) {
+		if (pos<divs[index]){
+			break;
+		}
+	}
+  $(".menumoblink a[target]:eq("+index+")").addClass("active");
 });
 
 
@@ -109,7 +162,7 @@ $(document).ready(function(){
 	})
 
 	.fail(function() {
-		alert('ko');
+		console.log('ko');
 	});
 });
 
@@ -136,7 +189,7 @@ $(".griglia").on('click','.picover',function() {
 		})
 
 		.fail(function() {
-			alert('ko');
+			console.log('ko');
 		});
 });
 
