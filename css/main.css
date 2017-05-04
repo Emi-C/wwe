@@ -319,7 +319,7 @@ background:rgba(255,255,255,.3);
 }
 #facilities{
 	background: url("../img/facilities.jpg") no-repeat center top;
-	background-size: cover;
+	background-size: contain;
 }
 #mappe{
 	background: url("../img/maps.jpg") no-repeat center top;
