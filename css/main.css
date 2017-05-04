@@ -267,7 +267,7 @@ background:rgba(255,255,255,.3);
 /*features*/
 #features{
     min-height:50vh;
-    background: url("../img/b3.png") no-repeat center top;
+    background: url("../img/features.png") no-repeat center top;
 		background-color:orange;
     background-size: cover;
 }
