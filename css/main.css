@@ -267,24 +267,27 @@ background:rgba(255,255,255,.3);
 /*features*/
 #features{
     min-height:50vh;
-    background: url("../img/features.png") no-repeat center top;
+    background: url("../img/features.jpg") no-repeat center top;
 		background-color:orange;
     background-size: cover;
 }
 /*features*/
 
 /*features2*/
-#mission{
+/*#mission{
     min-height:50vh;
     background: url("../img/b4.jpg") no-repeat center top;
 		background-color:brown;
     background-size: cover;
-}
+}*/
 /*features2*/
 
 /*portfolio*/
 #portfolio{
-    min-height:50vh;
+    min-height:70vh;
+		background: url("../img/portfolio.jpg") no-repeat center top;
+		background-color:orange;
+    background-size: cover;
 }
 /*portfolio*/
 
@@ -293,19 +296,19 @@ background:rgba(255,255,255,.3);
     min-height:50vh;
 }
 #servizio1{
-	background: url("../img/exh.png") no-repeat center top;
+	background: url("../img/exh.jpg") no-repeat center top;
 	background-size: cover;
 }
 #servizio2{
-	background: url("../img/stage.png") no-repeat center top;
+	background: url("../img/stage.jpg") no-repeat center top;
 	background-size: cover;
 }
 #servizio3{
-	background: url("../img/spec.png") no-repeat center top;
+	background: url("../img/spec.jpg") no-repeat center top;
 	background-size: cover;
 }
 #servizio4{
-	background: url("../img/tech.png") no-repeat center top;
+	background: url("../img/tech.jpg") no-repeat center top;
 	background-size: cover;
 }
 /*servizi*/
@@ -315,11 +318,12 @@ background:rgba(255,255,255,.3);
 	min-height:50vh;
 }
 #facilities{
-	background: url("../img/faci.png") no-repeat center top;
+	background: url("../img/facilities.jpg") no-repeat center top;
 	background-size: cover;
 }
 #mappe{
-	background:#ABA48F;
+	background: url("../img/maps.jpg") no-repeat center top;
+	background-size: cover;
 }
 /*facilities*/
 
@@ -331,21 +335,33 @@ background:rgba(255,255,255,.3);
 
 
 /*SERVICES*/
+.titsec.srvzgr{
+	text-shadow: 5px 5px 5px grey;
+}
+.titsec.srvzor{
+	text-shadow: 5px 5px 5px #F38B00;
+}
+
 .service{
 	overflow:hidden;
 	transition: all .7s;
 	max-height:0px;
 }
-.tgserv,.tgserv:hover,.tgserv:focus{
+.tgserv,.tgserv:hover,.tgserv:focus,.lnknews,.lnknews:hover,.lnknews:focus{
     color:#fafafa;
 		text-decoration: none;
+		position: relative;
+		text-shadow: 5px 5px 5px grey;
 }
-.tgserv:after{
+.tgserv.or,.tgserv.or:hover,.tgserv.or:focus,.lnknews,.lnknews:hover,.lnknews:focus{
+	text-shadow: 5px 5px 5px #F38B00;
+}
+.tgserv:after,.lnknews:after{
 	content: '';
   position: absolute;
   left: 45%;
   height: 50px;
-  bottom: -30px;
+  bottom: -40px;
   width: 50px;
   border-bottom: 5px solid #fafafa;
   border-right: 5px solid #fafafa;
@@ -429,7 +445,7 @@ background:rgba(255,255,255,.3);
 
 /*news*/
 #news{
-background: url("../img/news.png") no-repeat center top;
+background: url("../img/news.jpg") no-repeat center top;
 background-size: cover;
 }
 /*news*/
