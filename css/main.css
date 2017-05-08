@@ -27,16 +27,16 @@
 	font-style: normal;
 }
 html{
-font-size:19px;
+font-size:16px;
 }
 @media screen and (max-width: 1199px){
 	html{
-		font-size:16px;
+		font-size:14px;
 	}
 }
 @media screen and (max-width: 991px){
 	html{
-		font-size:14px;
+		font-size:13px;
 	}
 }
 @media screen and (max-width: 767px){
@@ -258,7 +258,7 @@ background:rgba(255,255,255,.3);
 /*manifesto*/
 #manifesto{
     min-height:50vh;
-    background: url("../img/b2.jpg") no-repeat center center;
+    background: url("../img/manifesto.jpg") no-repeat center center;
 		background-color:gold;
     background-size: cover;
 }
@@ -529,21 +529,21 @@ footer{
 
 /*TORNA SU*/
 #totop {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 9999;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    background:#444;
-    cursor: pointer;
-    border: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background:#444;
+  cursor: pointer;
+  border: 0;
 	font-size:1.5rem;
-    text-decoration: none;
-    transition: all 0.2s;
-    opacity: 0;
+	text-decoration: none;
+  transition: all 0.2s;
+  opacity: 0;
 	color: #fafafa;
 }
 #totop:hover {
