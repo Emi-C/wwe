@@ -285,15 +285,22 @@ background:rgba(255,255,255,.3);
 /*portfolio*/
 #portfolio{
     min-height:60vh;
+		padding-top:90px;
 		background: url("../img/portfolio.jpg") no-repeat center center;
 		background-color:orange;
     background-size: cover;
+}
+@media screen and (max-height:768px) {
+	#portfolio{
+	padding-top:30px;
+	min-height:75vh;
+}
 }
 /*portfolio*/
 
 /*servizi*/
 .servizio{
-    min-height:50vh;
+    min-height:40vh;
 }
 #servizio1{
 	background: url("../img/exh.jpg") no-repeat center top;
@@ -315,7 +322,7 @@ background:rgba(255,255,255,.3);
 
 /*facilities*/
 .facilities{
-	min-height:50vh;
+	min-height:40vh;
 }
 #facilities{
 	background: url("../img/facilities.jpg") no-repeat center top;
