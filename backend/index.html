@@ -6,14 +6,28 @@
     <link href="main.css" rel="stylesheet">
 
 </head>
-<body>
+<body id="bb" style="display:none">
+<script>
+function login(){
+return prompt("Inserisci Password");
+}
+
+while (pwd!="ecadminwwe"){
+	var pwd=login();
+}
+
+if(pwd=="ecadminwwe"){
+	document.getElementById("bb").style.display = "block";
+}
+</script>
+
 <div class="formin">
     <label id="ltit">Titolo</label><br>
     <input type="text" id="tit">
     <br>
-    <label id="ltxt">Testo</label><br>
+    <!--<label id="ltxt">Testo</label><br>
     <textarea id="txt"></textarea>
-    <br>
+    <br>-->
     <label id="limg">Immagine</label><br>
     <!--<input type="file" id="img">-->
     <div class="btn-container">
@@ -104,10 +118,10 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-<script src="ckeditor/ckeditor.js"></script>
+<!--<script src="ckeditor/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('txt');
-</script>
+</script>-->
 
 <script src="main.js"></script>
 
