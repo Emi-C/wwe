@@ -1,7 +1,7 @@
 <?php
 include('../dbclass.php');
 $tit=$_POST['tit'];
-$txt=$_POST['txt'];
+//$txt=$_POST['txt'];
 $img[0]=$_FILES['img'];
 $img[1]=$_FILES['img1'];
 $img[2]=$_FILES['img2'];
@@ -56,7 +56,7 @@ if (!mysqli_query($conn, $que)){
 	echo("Error shift: " . mysqli_error($conn));
 }
 
-$q="insert into wwe_foto (tit,testo,cat,img,img1,img2,img3,pos) values ('".$tit."','".$txt."',".$cat.",'".str_replace(" ","%20",$newfilename[0])."','".str_replace(" ","%20",$newfilename[1])."','".str_replace(" ","%20",$newfilename[2])."','".str_replace(" ","%20",$newfilename[3])."',1)";
+$q="insert into wwe_foto (tit,testo,cat,img,img1,img2,img3,pos) values ('".$tit."','',".$cat.",'".str_replace(" ","%20",$newfilename[0])."','".str_replace(" ","%20",$newfilename[1])."','".str_replace(" ","%20",$newfilename[2])."','".str_replace(" ","%20",$newfilename[3])."',1)";
 if (!mysqli_query($conn, $q)) {
     http_response_code(500);
     echo $q."\n";

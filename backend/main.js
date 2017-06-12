@@ -13,8 +13,8 @@ function getart(){
     .done(function(data) {
         var res="";
         $.each(data, function(i, e) {
-            //res+='<div class="articolo"><h3 class="titolo">'+e.tit+'</h3><br><img style="max-width:300px; display:inline-block;margin:20px;" src="'+e.img+'"><p><b>Categoria: </b>'+e.cat+'</p><btn class="del" id="'+e.id+'">elimina</btn></div>';
-            res+='<div class="articolo"><h3 class="titolo">'+e.tit+'</h3><br><img style="max-width:300px; display:inline-block;margin:20px;" src="'+e.img+'"><br>'+e.img1+e.img2+e.img3+'<br><p><b>Categoria: </b>'+e.cat+'</p><p>'+e.testo+'</p><div class="modpos"><label>Posizione: </label><select id="pos'+e.id+'">'+e.posbloc+'</select></div><br><btn class="del" id="'+e.id+'">elimina</btn></div>';
+            //res+='<div class="articolo"><h3 class="titolo">'+e.tit+'</h3><br><img style="max-width:300px; display:inline-block;margin:20px;" src="'+e.img+'"><br>'+e.img1+e.img2+e.img3+'<br><p><b>Categoria: </b>'+e.cat+'</p><p>'+e.testo+'</p><div class="modpos"><label>Posizione: </label><select id="pos'+e.id+'">'+e.posbloc+'</select></div><br><btn class="del" id="'+e.id+'">elimina</btn></div>';
+            res+='<div class="articolo"><h3 class="titolo">'+e.tit+'</h3><br><img style="max-width:300px; display:inline-block;margin:20px;" src="'+e.img+'"><br>'+e.img1+e.img2+e.img3+'<br><p><b>Categoria: </b>'+e.cat+'</p><div class="modpos"><label>Posizione: </label><select id="pos'+e.id+'">'+e.posbloc+'</select></div><br><btn class="del" id="'+e.id+'">elimina</btn></div>';
         });
         $("#results").html(res);
     })
@@ -54,22 +54,21 @@ $(".formin input").keyup(function(){
 $(".formin select").change(function(){
     checkform();
 });
-CKEDITOR.instances.txt.on('key', function(e) {
+/*CKEDITOR.instances.txt.on('key', function(e) {
     var self = this;
 
     setTimeout(function() {
         checkform();
     }, 10);
-});
+});*/
 
 function checkform(){
-    var txtval=CKEDITOR.instances.txt.getData();
+    //var txtval=CKEDITOR.instances.txt.getData();
     var err=0;
     if ($("#tit").val()==""){err=1}
-    if (txtval==""){err=1}
+    //if (txtval==""){err=1}
     if ($("[id*='imgflag']").val()==1){err=1}
     if ($("#cat").val()==""){err=1}
-
     //anno sempre valorizzato
 
     if (err!=1){$("#sbm").addClass("sbmok")}else{$("#sbm").removeClass("sbmok")}
@@ -83,7 +82,7 @@ $(".formin").on("click",".sbmok",function(){
 function putart(){
     var fd = new FormData();
     fd.append('tit', $('#tit').val());
-    fd.append('txt', CKEDITOR.instances.txt.getData());
+    //fd.append('txt', CKEDITOR.instances.txt.getData());
     fd.append('img', $('#img')[0].files[0]);
     fd.append('cat', $('#cat').val());
     fd.append('img1', $('#img1')[0].files[0]);
@@ -102,7 +101,7 @@ function putart(){
     .done(function() {
         alert('Articolo inserito con successo!');
         $('#tit').val("");
-        CKEDITOR.instances.txt.setData("");
+        //CKEDITOR.instances.txt.setData("");
         $('[id*="img"]').val("");
         $('[id*="imgflag"]').val(1);
         $('[class*="imgupload"]').not('[class*="imguploadstop"]').show("slow");
