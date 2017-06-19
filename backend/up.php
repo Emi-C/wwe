@@ -9,8 +9,7 @@ $img[3]=$_FILES['img3'];
 $cat=$_POST['cat'];
 //$anno=$_POST['anno'];
 
-//$uploaddir = '/backend/imgups/';
-$uploaddir = '/wwe/backend/imgups/';
+$uploaddir = '/backend/imgups/';
 $uploadfile[0] = $uploaddir . basename($img[0]['name']);
 $uploadfile[1] = $uploaddir . basename($img[1]['name']);
 $uploadfile[2] = $uploaddir . basename($img[2]['name']);
