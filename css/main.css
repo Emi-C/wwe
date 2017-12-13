@@ -139,13 +139,14 @@ hr.tall{
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     font-weight:400;
+    letter-spacing: 1px;
 }
 
 h2.titsec{
 	font-size:5.5rem;
 }
 h3.titsec{
-	font-size:2.5rem;
+	font-size:3rem;
 }
 h4.titsec{
 	font-size:2rem;
